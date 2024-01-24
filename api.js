@@ -50,6 +50,13 @@ router.route('/depo/:subeno').get( apiKey, (request, response) => {
         response.json(result);
     });
 });
+// /depo/:subeno 
+router.route('/depo/:ghj').get( apiKey, (request, response) => {
+    console.log(request.body);
+    dboperations.getDepoSubeNo(request.params.subeno).then(result => {
+        response.json(result);
+    });
+});
 
 
 
